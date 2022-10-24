@@ -10,3 +10,4 @@
 
 # Exclude these files:
 !/.gitignore
+!/*/.gitignore
