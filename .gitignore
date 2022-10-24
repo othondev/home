@@ -1,0 +1,12 @@
+/*
+
+# Exclude these folder:
+!/.vim
+!/.zsh
+!/.tmux
+!/.ssh
+!/.kitty
+!/workspaces
+
+# Exclude these files:
+!/.gitignore
