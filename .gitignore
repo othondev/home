@@ -9,6 +9,7 @@
 !/.vim
 !/.zsh
 !/.config/nvim
+!/.config/i3
 !/workspaces
 
 # Exclude these files:
