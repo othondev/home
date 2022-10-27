@@ -1,11 +1,14 @@
 /*
+!/.config
+/.config/*
 
 # Exclude these folder:
+!/.kitty
+!/.ssh
+!/.tmux
 !/.vim
 !/.zsh
-!/.tmux
-!/.ssh
-!/.kitty
+!/.config/nvim
 !/workspaces
 
 # Exclude these files:
