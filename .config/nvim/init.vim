@@ -62,13 +62,11 @@ inoremap jk <Esc>
 call plug#begin()
 Plug 'APZelos/blamer.nvim'
 Plug 'airblade/vim-gitgutter'
-Plug 'github/copilot.vim'
 Plug 'jparise/vim-graphql'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
-Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
@@ -144,8 +142,8 @@ function LoadCustomConfig(pluginName)
     nmap <silent> gd <Plug>(coc-definition)
     nmap <silent> gr <Plug>(coc-references)
     nmap <silent> gy <Plug>(coc-type-definition)
-    vnoremap <leader>aa :CocAction <CR>
-    nmap <leader>aa :CocAction <CR>
+    vnoremap <leader>aa <Plug>(coc-codeaction-selected) <CR>
+    nmap <leader>aa <Plug>(coc-codeaction-selected) <CR>
     nnoremap <leader>af :CocFix <CR>
     nmap <leader>rn <Plug>(coc-rename)
     nmap <leader>qf  <Plug>(coc-fix-current)
@@ -223,4 +221,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-colorscheme gruvbox
+colorscheme onedark
