@@ -1,8 +1,12 @@
 /*
 !/.config
 /.config/*
+!/.local
+/.local/*
+!/.local/share
+/.local/share/*
 
-# Exclude these folder:
+# Including on repository these folder:
 !/.kitty
 !/.ssh
 !/.tmux
@@ -10,8 +14,8 @@
 !/.zsh
 !/.config/nvim
 !/.config/i3
-!/workspaces
+!/.local/share/db_ui
 
-# Exclude these files:
+# Including on repository these files:
 !/.gitignore
 !/*/.gitignore
