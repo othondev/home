@@ -55,6 +55,7 @@ nnoremap <silent> <Leader>- :vertical resize -30<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 inoremap jk <Esc>
+inoremap kj <Esc>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                                     Plugins
 "
@@ -160,6 +161,7 @@ function LoadCustomConfig(pluginName)
 
   if a:pluginName == 'telescope'
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
+    nnoremap <leader>fu <cmd>Telescope find_files<cr>
     nnoremap <leader>fw :execute 'Telescope live_grep default_text=' . "" . expand('<cword>')<cr>
     nnoremap <leader>f? <cmd>Telescope help_tags<cr>
   endif
@@ -185,6 +187,7 @@ function LoadCustomConfig(pluginName)
     nnoremap <Leader>fc :BCommits<CR>
     nnoremap <Leader>fC :Commits<CR>
     nnoremap <Leader>pf :Files<CR>
+    nnoremap <Leader>/ :Rg<space>
     nnoremap <TAB>w :Windows<CR>
     nnoremap <TAB>b :Buffers<CR>
   endif
