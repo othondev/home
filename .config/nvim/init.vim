@@ -80,6 +80,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'kristijanhusak/vim-packager', { 'type': 'opt' }
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -186,6 +191,12 @@ function LoadCustomConfig(pluginName)
 
   if a:pluginName == 'vim-startify'
     let g:startify_custom_header = systemlist('gh issue list')
+  endif
+
+  if a:pluginName == 'sniprun'
+    vmap <leader>r <Plug>SnipRun
+    nmap <leader>rr <Plug>SnipRun
+    nmap <leader>r <Plug>SnipRunOperator
   endif
 
 endfunction
